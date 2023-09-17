@@ -33,7 +33,7 @@ export const Avatar = styled.img`
   width: 100px;
   height: 100px;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
-  margin-tip: 40px;
+  margin-top: 40px;
   margin-right: auto;
   margin-left: auto;
 `;
