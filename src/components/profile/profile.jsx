@@ -13,7 +13,6 @@ import {
   Quantity,
 } from './profile.styled';
 
-console.log(user);
 export const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
     <Container class="profile">

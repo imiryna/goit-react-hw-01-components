@@ -7,7 +7,7 @@ export const Container = styled.div`
   margin-right: auto;
   margin-left: auto;
   padding: 20px;
-  background-color: rgb(246, 244, 244);
+  background-color: rgb(206, 213, 222);
 `;
 export const Description = styled.div`
   display: flex;
@@ -60,23 +60,24 @@ export const Location = styled.p`
 `;
 export const StatsList = styled.ul`
   display: flex;
-  width: 225px;
+  width: 264px;
+  padding: 0;
   margin: 0 auto;
   border-bottom-right-radius: 4px;
   border-bottom-left-radius: 4px;
   outline: 1px solid rgb(246, 244, 244);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
 `;
 export const ListItem = styled.li`
   display: flex;
   flex-direction: column;
+  padding: 10px 23px;
   align-items: center;
   justify-content: center;
   border-right: 1px solid rgb(246, 244, 244);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
-  flex: 1;
   text-align: center;
   background-color: rgb(226, 223, 223);
-  padding: 10px;
+  padding: 10px 24px;
 
   &:first-of-type {
     border-bottom-left-radius: 3px;
@@ -84,6 +85,7 @@ export const ListItem = styled.li`
   &:last-child {
     border: none;
     border-bottom-right-radius: 3px;
+    padding: 10px 20px;
   }
 `;
 export const Label = styled.span`
