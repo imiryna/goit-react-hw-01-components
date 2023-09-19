@@ -1,10 +1,12 @@
-import data from '../data/data.json';
+// import data from '../data/data.json';
 import PropTypes from 'prop-types';
 import {
   Container,
   Title,
   StatList,
   ItemList,
+  Label,
+  Percentage,
 } from '../Statistics/statistics.styled';
 
 const getRandomHexColor = () =>
@@ -14,17 +16,17 @@ const getRandomHexColor = () =>
 
 export const Statistics = ({ title, stats }) => {
   return (
-    <Container class="statistics">
-      <Title class="title">{title}</Title>
+    <Container>
+      <Title>{title}</Title>
 
-      <StatList class="stat-list">
+      <StatList>
         {stats.map(item => (
           <ItemList
-            class="item"
+            key={item.id}
             style={{ backgroundColor: getRandomHexColor() }}
           >
-            <span class="label">{item.label}</span>
-            <span class="percentage">{item.percentage}%</span>
+            <Label>{item.label}</Label>
+            <Percentage>{item.percentage}%</Percentage>
           </ItemList>
         ))}
       </StatList>

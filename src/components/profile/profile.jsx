@@ -1,4 +1,4 @@
-import user from '../data/user.json';
+// import user from '../data/user.json';
 import PropTypes from 'prop-types';
 import {
   Container,
@@ -15,26 +15,26 @@ import {
 
 export const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
-    <Container class="profile">
-      <Description class="description">
-        <Avatar src={avatar} alt={username} class="avatar" />
-        <Name class="name">{username}</Name>
-        <Tag class="tag">{tag}</Tag>
-        <Location class="location">{location}</Location>
+    <Container>
+      <Description>
+        <Avatar src={avatar} alt={username} />
+        <Name>{username}</Name>
+        <Tag>{tag}</Tag>
+        <Location>{location}</Location>
       </Description>
 
-      <StatsList class="stats">
+      <StatsList>
         <ListItem>
-          <Label class="label">Followers</Label>
-          <Quantity class="quantity">{stats.followers}</Quantity>
+          <Label>Followers</Label>
+          <Quantity>{stats.followers}</Quantity>
         </ListItem>
         <ListItem>
-          <Label class="label">Views</Label>
-          <Quantity class="quantity">{stats.views}</Quantity>
+          <Label>Views</Label>
+          <Quantity>{stats.views}</Quantity>
         </ListItem>
         <ListItem>
-          <Label class="label">Likes</Label>
-          <Quantity class="quantity">{stats.likes}</Quantity>
+          <Label>Likes</Label>
+          <Quantity>{stats.likes}</Quantity>
         </ListItem>
       </StatsList>
     </Container>

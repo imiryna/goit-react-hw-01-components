@@ -1,33 +1,38 @@
-import friends from '../data/friends.json';
+// import friends from '../data/friends.json';
 import PropTypes from 'prop-types';
-import { FriendContainer } from './friendList.styled';
+import {
+  FriendContainer,
+  FriendItem,
+  Avatar,
+  Name,
+  IsOnline,
+} from './friendList.styled';
 
 export const FriendList = friends => {
   return (
-    <FriendContainer class="friend-list">
+    <FriendContainer>
       {friends.friends.map(friend => (
-        <li class="item" id={friend.id}>
-          <span class="status">{friend.isOnline}</span>
-          <img
-            class="avatar"
-            src={friend.avatar}
-            alt={friend.name}
-            width="48"
-          />
-          <p class="name">{friend.name}</p>
-        </li>
+        <FriendItem key={friend.id}>
+          <IsOnline $statusType={friend.isOnline}></IsOnline>
+          <Avatar src={friend.avatar} alt={friend.name} width="48" />
+          <Name>{friend.name}</Name>
+        </FriendItem>
       ))}
     </FriendContainer>
   );
 };
 
-// FriendList.PropTypes = {
-//   friends: PropTypes.arrayOf(
-//     PropTypes.shape({
-//       id: PropTypes.number.isRequired,
-//       avatar: PropTypes.string.isRequired,
-//       name: PropTypes.string.isRequired,
-//       isOnline: PropTypes.bool.isRequired,
-//     })
-//   ).isRequired,
-// };
+// function ceckIsOnline(friend.isOnline) {
+//   friend.isOnline === true? ClassNames=IsOnline
+// }
+
+FriendList.propTypes = {
+  friends: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      avatar: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      isOnline: PropTypes.bool.isRequired,
+    })
+  ).isRequired,
+};

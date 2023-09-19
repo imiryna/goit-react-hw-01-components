@@ -49,3 +49,13 @@ export const ItemList = styled.li`
     border-bottom-right-radius: 5px;
   }
 `;
+export const Label = styled.span`
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: 500;
+`;
+export const Percentage = styled.span`
+  text-align: center;
+  font-weight: 500;
+  font-size: 18px;
+`;
